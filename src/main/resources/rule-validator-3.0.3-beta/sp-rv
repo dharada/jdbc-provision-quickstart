@@ -1,0 +1,24 @@
+#!/bin/sh
+#
+# (c)Copyright 2023 SailPoint Technologies, Inc., All Rights Reserved.
+#
+# Run the SaaS Rule Validator launcher
+#
+# In Linux, to make this script executable use:
+#
+#	chmod +x validate
+#
+
+#
+# Get the path of this script
+#
+
+SCRIPTPATH=$(
+  cd $(dirname "$0")
+  pwd
+)
+
+#
+# Run DevSAK
+#
+java -jar "$SCRIPTPATH/sailpoint-saas-rule-validator.jar" "$@"
